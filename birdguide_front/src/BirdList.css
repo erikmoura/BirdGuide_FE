@@ -1,0 +1,26 @@
+.bird-list-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.bird-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.bird-item {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.bird-item h3 {
+    margin: 0 0 10px 0;
+}
+
+.bird-item p {
+    margin: 5px 0;
+}

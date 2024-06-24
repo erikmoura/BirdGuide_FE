@@ -1,0 +1,47 @@
+/* src/components/UserProfile.css */
+.user-profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.user-profile-container h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 24px;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.user-profile-container p {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #555;
+}
+
+.user-profile-container p strong {
+    color: #333;
+}
+
+.user-profile-container button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.user-profile-container button:hover {
+    background-color: #45a049;
+}

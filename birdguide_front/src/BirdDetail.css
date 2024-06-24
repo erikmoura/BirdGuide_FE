@@ -1,0 +1,16 @@
+.bird-detail-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.bird-detail-container h2 {
+    margin-bottom: 20px;
+}
+
+.bird-detail-container p {
+    margin: 10px 0;
+}
