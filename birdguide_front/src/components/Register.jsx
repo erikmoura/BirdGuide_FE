@@ -1,7 +1,6 @@
-// src/components/Register.js
 import React, { useState } from 'react';
-import usersApi from '../axiosApi/usersApi'
-import '../styles.css';
+import usersApi from '../axiosApi/usersApi';
+import '../styling/Register.css';
 
 const Register = () => {
     const [username, setUsername] = useState('');
@@ -20,24 +19,26 @@ const Register = () => {
     };
 
     return (
-        <div className="container">
-            <h2>Register</h2>
-            <form onSubmit={handleSubmit}>
-                <div>
-                    <label>Username:</label>
-                    <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} required />
-                </div>
-                <div>
-                    <label>Password:</label>
-                    <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
-                </div>
-                <div>
-                    <label>Email:</label>
-                    <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
-                </div>
-                <button type="submit">Register</button>
-            </form>
-            {message && <p>{message}</p>}
+        <div className="register-container">
+            <div className="register-form">
+                <h2>Registro</h2>
+                <form onSubmit={handleSubmit}>
+                    <div>
+                        <label>Nome de usuário:</label>
+                        <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} required />
+                    </div>
+                    <div>
+                        <label>Senha:</label>
+                        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
+                    </div>
+                    <div>
+                        <label>Email:</label>
+                        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+                    </div>
+                    <button type="submit">Registro</button>
+                </form>
+                {message && <p>{message}</p>}
+            </div>
         </div>
     );
 };

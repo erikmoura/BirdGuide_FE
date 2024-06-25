@@ -1,0 +1,31 @@
+.user-profile-container {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+}
+
+.user-profile-container h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 24px;
+    border-bottom: 2px solid #e66875;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.user-profile-container p {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #555;
+}
+
+.user-profile-container p strong {
+    color: #333;
+}
+

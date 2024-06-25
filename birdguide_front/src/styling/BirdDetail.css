@@ -1,0 +1,37 @@
+.bird-detail-container {
+    width: 100vw;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bird-detail-container h2 {
+    margin-bottom: 20px;
+    color: black;
+}
+
+.bird-detail-container p {
+    margin: 10px 0;
+}
+
+.bird-detail-container img{
+    width: 250px;
+    height: 250px;
+}
+
+.bird-detail-container button{
+    background-color: #e66875;
+}
+
+.bird-detail-container button:hover{
+    background-color: #df4c58;
+}
+
+.bird-detail-container button:focus{
+    outline: none;
+}

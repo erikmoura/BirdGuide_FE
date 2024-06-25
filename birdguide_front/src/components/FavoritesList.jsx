@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
-import '../FavoritesList.css';
+import '../styling/FavoritesList.css';
 
 const FavoritesList = ({ userId }) => {
     const [favorites, setFavorites] = useState([]);
@@ -13,7 +13,7 @@ const FavoritesList = ({ userId }) => {
                 setFavorites(response.data);
             })
             .catch(error => {
-                console.error("There was an error fetching the favorites!", error);
+                console.error("Erro ao encontrar favoritos", error);
             });
     }, [userId]);
 
@@ -28,7 +28,6 @@ const FavoritesList = ({ userId }) => {
                     favorites.map(bird => (
                         <div key={bird.id} className="favorite-item">
                             <h3>{bird.nome}</h3>
-                            <p>{bird.local}</p>
                             <Link to={`/birds/${bird.id}`}>
                                 <button>Ver detalhes</button>
                             </Link>

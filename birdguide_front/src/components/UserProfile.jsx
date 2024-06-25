@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Navbar from './Navbar';
-import '../UserProfile.css';
+import '../styling/UserProfile.css';
 
 const UserProfile = ({ userId }) => {
     const [user, setUser] = useState(null);

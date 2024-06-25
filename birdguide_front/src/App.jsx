@@ -6,7 +6,7 @@ import BirdList from './components/BirdList';
 import BirdDetail from './components/BirdDetail';
 import UserProfile from './components/UserProfile';
 import FavoritesList from './components/FavoritesList';
-import './styles.css';
+import './styling/styles.css'
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -24,7 +24,7 @@ function App() {
 
   return (
     <Router>
-      <div className="container">
+      <div >
         {isLoggedIn ? (
           <Routes>
             <Route path="/" element={<BirdList />} />

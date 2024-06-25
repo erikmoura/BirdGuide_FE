@@ -1,0 +1,42 @@
+.navbar {
+    background-color: #e45965;
+    padding: 10px;
+    width: 100vw;
+    display:flex;
+    justify-content: center;
+    position:fixed;
+    top:0;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar li {
+    margin: 5px 10px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navbar a:hover {
+    color: #fea5a5;
+    text-decoration: underline;
+}
+
+.logo {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-right: 700px;
+}

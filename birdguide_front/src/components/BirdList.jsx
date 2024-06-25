@@ -1,41 +1,50 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import birdsApi from '../axiosApi/birdsApi';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
-import '../BirdList.css';
-import Navbar from './Navbar';
+import SearchBirds from './SearchBirds';
+import Navbar from './Navbar'
+import '../styling/BirdList.css';
 
 const BirdList = () => {
     const [birds, setBirds] = useState([]);
+    const [searchResults, setSearchResults] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:8080/api/birds/listar')
-            .then(response => {
+        const fetchBirds = async () => {
+            try {
+                const response = await birdsApi.get('/listar');
                 setBirds(response.data);
-            })
-            .catch(error => {
-                console.error("There was an error fetching the bird data!", error);
-            });
+            } catch (error) {
+                console.error('Erro ao buscar pássaros', error);
+            }
+        };
+        fetchBirds();
     }, []);
+
+    const handleSearchResults = (results) => {
+        setSearchResults(results);
+    };
+
+    const birdsToDisplay = searchResults.length > 0 ? searchResults : birds;
 
     return (
         <div>
             <Navbar />
             <div className="bird-list-container">
+                <SearchBirds onSearchResults={handleSearchResults} />
                 <h2>Lista de Pássaros</h2>
                 <div className="bird-list">
-                    {birds.map(bird => (
+                    {birdsToDisplay.map((bird) => (
                         <div key={bird.id} className="bird-item">
                             <h3>{bird.nome}</h3>
-                            <p><strong>Local:</strong> {bird.local}</p>
-                            <p><strong>Descrição:</strong> {bird.description}</p>
-                            <Link to={`/birds/${bird.id}`}>
-                                <button>Ver detalhes</button>
-                            </Link>
+                            <img src={bird.image}/>
+                            <li><Link to={`/birds/${bird.id}`}>Ver detalhes</Link></li>
                         </div>
                     ))}
                 </div>
             </div>
         </div>
+        
     );
 };
 

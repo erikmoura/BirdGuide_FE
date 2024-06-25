@@ -1,0 +1,115 @@
+.bird-list-container {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    padding: 5px 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);    
+    margin: 20px auto;
+    box-sizing: border-box; 
+}
+
+.bird-list-container h2 {
+    color: black;
+    text-align: center; 
+}
+
+.bird-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-gap: 2px;
+    width: 100%; 
+    min-height: 0;  
+    min-width: 0;   
+}
+
+.bird-item {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    text-align: center; 
+    overflow: hidden;
+    min-height: 0;
+    min-width: 0;
+}
+
+.bird-item h3 {
+    color: black;
+    margin: 0 0 10px 0;
+    text-align: center; 
+}
+
+.bird-item p {
+    color: #e66875; 
+    margin: 5px 0;
+    text-align: center; 
+}
+
+.bird-item img {
+    width: 200px;
+    display: block; 
+    margin: 5px auto; 
+}
+
+.bird-item li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bird-item a {
+    color: rgb(240, 128, 128);
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.bird-item a:hover {
+    color: #f05757;
+    text-decoration: underline;
+}
+
+.search-container {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-end; 
+}
+
+.search-container form {
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+}
+
+.search-container input {
+    background-color:#e66875;
+    padding: 8px;
+    width: 200px;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.search-container input:focus{
+    outline: none;
+}
+
+/*nao usado*/
+.search-container input::placeholder{
+    color: white;
+}
+
+.search-container button {
+    padding: 8px 16px;
+    background-color: #e95c68;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-container button:hover {
+    background-color: #df4c58;
+}
